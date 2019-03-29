@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="ShomoyClub" Class="dbDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=ACER;Initial Catalog=ShomoyClub;Integrated Security=True" SettingsObjectName="ShomoyClub.Properties.Settings" SettingsPropertyName="ShomoyClubConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.admin" Member="admins">
+    <Type Name="admin">
+      <Column Name="admin_name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="t_department" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="t_id" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="password" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.registration" Member="registrations">
+    <Type Name="registration">
+      <Column Name="name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="student_id" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="department" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="age" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="mail_address" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="blood_group" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="phone_number" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="password" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="status" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.donwithtable" Member="donwithtables">
+    <Type Name="donwithtable">
+      <Column Name="transaction_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="donor_id" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="donation_amount" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="donation_date" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="donation_details" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="withdrawer_id" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="withdrawal_amount" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="withdrawal_date" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="withdrawal_details" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="status" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+</Database>
